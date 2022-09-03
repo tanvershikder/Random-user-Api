@@ -62,23 +62,23 @@ module.exports.patchUserData = (req, res) => {
         if (patchData) {
             if (patchData.name) {
                 findData.name = patchData.name
-                res.send(data)
+                // res.send(data)
             }
             if (patchData.gender) {
                 findData.gender = patchData.gender
-                res.send(data)
+                // res.send(data)
             }
             if (patchData.contact) {
                 findData.contact = patchData.contact
-                res.send(data)
+                // res.send(data)
             }
             if (patchData.address) {
                 findData.address = patchData.address
-                res.send(data)
+                // res.send(data)
             }
             if (patchData.photo_url) {
                 findData.photo_url = patchData.photo_url
-                res.send(data)
+                // res.send(data)
             }
         }
     }
