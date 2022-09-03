@@ -23,7 +23,7 @@ router.route('/Get/user/All')
 router.route('/Get/User/Random')
 
 /**
- * @api {get} / get request
+ * @api {get} / get request   
  * @apiDescription get Random user
  * @apiPermission admin
  * 
