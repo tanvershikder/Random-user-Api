@@ -79,10 +79,51 @@ router.route('/Patch/user/save/:id')
 
 
 router.route('/Patch/user/bulk-update')
+/**
+ * @api {patch} /patch request
+ * @apiDescription patch multiple user data
+ * @apiExample
+ * 
+ * {
+  "ids":[1,2,3],
+  "info":{
+    "name":"fahim",
+    "gender":"femel"
+  }
+}
+ * 
+ * @apiPermission admin
+ * @apiBody send user all data in object id in array [] and info in object {} and info take which we want to change and what we want to change and vlue Example are given Up
+ *
+ * @apiHeader {string} Authentication user's access token
+ * 
+ * @apiSuccess {objecet []} all user
+ * 
+ * @apiError (unauthorized 401) UnAuthorized only authneticatic user can access the data
+ * @apiError (Forbiden 403)     forbiden  if user not admin
+ * 
+ * 
+ */
 .patch(userController.patchMultipleuserData)
 
 
 router.route('/Delete/user/delete/:id')
+/**
+ * @api {delete} /delete request
+ * @apiDescription delete a user data vi id
+ * @apiPermission admin
+ * @apiBody send user data 
+ *
+ * @apiHeader {string} Authentication user's access token
+ * @apiParams tke user id
+ * 
+ * @apiSuccess {objecet []} all user
+ * 
+ * @apiError (unauthorized 401) UnAuthorized only authneticatic user can access the data
+ * @apiError (Forbiden 403)     forbiden  if user not admin
+ * 
+ * 
+ */
 .delete(userController.deleteUser)
 
 module.exports = router;

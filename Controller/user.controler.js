@@ -93,7 +93,46 @@ module.exports.patchUserData = (req, res) => {
 
 
 module.exports.patchMultipleuserData = (req, res) => {
-    res.send("working")
+    const {ids,info} = req.body
+    const patchData = info
+
+    ids.map(id=>{
+        const findData = data.find(dta=> dta.id === id)
+
+        if (patchData && findData) {
+            console.log(patchData);
+            if (patchData.id) {
+                findData.id = Number(patchData.id)
+                // res.send(data)
+            }
+            if (patchData.name) {
+                findData.name = patchData.name
+                // res.send(data)
+            }
+            if (patchData.gender) {
+                findData.gender = patchData.gender
+                // res.send(data)
+            }
+            if (patchData.contact) {
+                findData.contact = patchData.contact
+                // res.send(data)
+            }
+            if (patchData.address) {
+                findData.address = patchData.address
+                // res.send(data)
+            }
+            if (patchData.photo_url) {
+                findData.photo_url = patchData.photo_url
+                // res.send(data)
+            }
+        }
+        
+    })
+    res.send(data)
+
+    // console.log(ids)
+    // console.log(info);
+    
 }
 
 
