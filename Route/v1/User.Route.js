@@ -3,7 +3,7 @@ const express = require("express")
 const router = express.Router()
 const userController = require('../../Controller/user.controler')
 
-router.route('Get/user/All')
+router.route('/Get/user/All')
 /**
  * @api {get} / get request
  * @apiDescription get all user with limit
@@ -20,7 +20,7 @@ router.route('Get/user/All')
  */
 .get(userController.gellAllusers)
 
-router.route('/Get/User/Random')
+router.route('/Get/user/random')
 
 /**
  * @api {get} / get request   
