@@ -20,7 +20,7 @@ router.route('Get/user/All')
  */
 .get(userController.gellAllusers)
 
-router.route('Get/User/Random')
+router.route('/Get/User/Random')
 
 /**
  * @api {get} / get request   
@@ -40,7 +40,7 @@ router.route('Get/User/Random')
  */
 .get(userController.getRandom)
 
-router.route('Post/user/save')
+router.route('/Post/user/save')
 /**
  * @api {post} /post request
  * @apiDescription post a user
@@ -59,7 +59,7 @@ router.route('Post/user/save')
  */
 .post(userController.postUserData)
 
-router.route('Patch/user/save/:id')
+router.route('/Patch/user/save/:id')
 /**
  * @api {patch} /patch request
  * @apiDescription patch a user data
@@ -78,7 +78,7 @@ router.route('Patch/user/save/:id')
 .patch(userController.patchUserData)
 
 
-router.route('Patch/user/bulk-update')
+router.route('/Patch/user/bulk-update')
 /**
  * @api {patch} /patch request
  * @apiDescription patch multiple user data
@@ -107,7 +107,7 @@ router.route('Patch/user/bulk-update')
 .patch(userController.patchMultipleuserData)
 
 
-router.route('Delete/user/delete/:id')
+router.route('/Delete/user/delete/:id')
 /**
  * @api {delete} /delete request
  * @apiDescription delete a user data vi id
